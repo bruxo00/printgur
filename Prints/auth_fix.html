@@ -1,0 +1,31 @@
+﻿<!-- IMGUR API sends a invalid query string which I couldn't fix with C# so this page fixes the URL and redirects to the real
+auth endpoint -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Printgur - Auth Server</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/YnNAXtk.png" />
+</head>
+
+<body>
+    <h1>Redirecting...</h1>
+
+    <script>
+        let url = window.location.href;
+
+        if (url.includes('state=#')) {
+            url = url.replace('state=#', '');
+        }
+
+        url = url.split('?').pop();
+
+        const urlSearchParams = new URLSearchParams(url);
+
+        window.document.location = `http://localhost:6547/authorize?${urlSearchParams.toString()}`;
+    </script>
+</body>
+
+</html>
