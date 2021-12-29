@@ -31,3 +31,4 @@ Simple tool to take screenshots and upload them directly to Imgur.com. It will s
 - [ ] Optimize RAM usage by the snipping tool
 - [ ] Add a screenshot editor
 - [ ] Create uninstaller
+- [ ] Add hotkey to screenshot
