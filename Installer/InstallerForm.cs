@@ -124,7 +124,7 @@ namespace Installer
             rk.SetValue("Icon", iconPath);
 
             rk = rk.CreateSubKey("command", true);
-            rk.SetValue("", string.Format("{0} \"%1\" -context", exePath));
+            rk.SetValue("", string.Format("{0} \"%1\" -upload", exePath));
         }
 
         public void Install()
