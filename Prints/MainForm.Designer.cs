@@ -326,7 +326,7 @@ namespace Prints
             this.foreverCheckBox3.Options = ReaLTaiizor.Controls.ForeverCheckBox._Options.Style1;
             this.foreverCheckBox3.Size = new System.Drawing.Size(197, 22);
             this.foreverCheckBox3.TabIndex = 2;
-            this.foreverCheckBox3.Text = "Use with printscreen Key";
+            this.foreverCheckBox3.Text = "Use with printscreen key";
             this.foreverCheckBox3.CheckedChanged += new ReaLTaiizor.Controls.ForeverCheckBox.CheckedChangedEventHandler(this.foreverCheckBox3_CheckedChanged);
             // 
             // foreverCheckBox1
@@ -465,7 +465,7 @@ namespace Prints
             this.foreverRadioButton1.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
             this.foreverRadioButton1.Size = new System.Drawing.Size(245, 22);
             this.foreverRadioButton1.TabIndex = 13;
-            this.foreverRadioButton1.Text = "Copy URL to clipboard automatically";
+            this.foreverRadioButton1.Text = "Copy URL to clipboard";
             this.foreverRadioButton1.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton1_CheckedChanged);
             // 
             // foreverRadioButton2
