@@ -16,10 +16,10 @@ namespace Prints
         public bool saveLocally { get; set; }
         public bool usePrtScreenKey { get; set; }
         public bool openInBrowser { get; set; }
-        public bool copyToClipboard { get; set; }
         public bool hasSeenMessage { get; set; }
         public Color outlineColor { get; set; }
         public Color hazeColor { get; set; }
+        public int afterPrintAction { get; set; }
 
         public static string appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "printgur");
         public static string ssFolder = Path.Combine(Settings.appDataFolder, "screenshots");
@@ -49,9 +49,9 @@ namespace Prints
                 settings.saveLocally = false;
                 settings.usePrtScreenKey = true;
                 settings.openInBrowser = true;
-                settings.copyToClipboard = true;
+                settings.afterPrintAction = 0;
                 settings.hasSeenMessage = false;
-                settings.outlineColor = Color.FromArgb(35, 168, 109);
+                settings.outlineColor = Color.FromArgb(255, 255, 255);
                 settings.hazeColor = Color.FromArgb(35, 168, 109);
 
                 Settings.appSettings = settings;

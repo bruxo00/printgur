@@ -61,7 +61,7 @@ namespace Prints
 
         private static bool CheckFileExtension(string imagePath)
         {
-            string[] allowedExtensions = { "jpeg", "png", "gif", "apng", "tiff" };
+            string[] allowedExtensions = { "jpeg", "jpg", "png", "gif", "apng", "tiff" };
             string[] temp = imagePath.Split('.');
             string extension = temp[temp.Length - 1];
 

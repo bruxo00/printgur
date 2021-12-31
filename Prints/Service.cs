@@ -15,10 +15,26 @@ namespace Prints
 {
     class Service
     {
+        public static GlobalKeyboardHook keyboardHook;
         public static void RestartApplication()
         {
             Application.Restart();
             Environment.Exit(0);
+        }
+
+        public static void LoadKeyboardHook()
+        {
+            keyboardHook = new GlobalKeyboardHook();
+            keyboardHook.KeyboardPressed += OnKeyPressed;
+        }
+
+        private static void OnKeyPressed(object sender, GlobalKeyboardHookEventArgs e)
+        {
+            if(e.KeyboardData.VirtualCode == GlobalKeyboardHook.VkSnapshot && e.KeyboardState == GlobalKeyboardHook.KeyboardState.KeyDown && Settings.appSettings.usePrtScreenKey)
+            {
+                SnippingTool.Snip();
+                e.Handled = true;
+            }
         }
     }
 }

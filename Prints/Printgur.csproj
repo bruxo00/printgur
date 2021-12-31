@@ -104,6 +104,7 @@
     <Compile Include="CLIHiddenForm.Designer.cs">
       <DependentUpon>CLIHiddenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalKeyboardHook.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

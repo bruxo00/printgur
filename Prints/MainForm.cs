@@ -31,6 +31,8 @@ namespace Prints
             notifyIcon1.ContextMenuStrip.Items.Add("Open", null, MenuItem3_Click);
             notifyIcon1.ContextMenuStrip.Items.Add("Take Screenshot", null, MenuItem1_Click);
             notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, MenuItem2_Click);
+
+            Service.LoadKeyboardHook();
         }
 
         void MenuItem3_Click(object sender, EventArgs e)
@@ -85,9 +87,13 @@ namespace Prints
                 Process.Start(imageUpload.Link);
             }
 
-            if (Settings.appSettings.copyToClipboard)
+            if (Settings.appSettings.afterPrintAction == 0)
             {
                 Clipboard.SetText(imageUpload.Link);
+            }
+            else if(Settings.appSettings.afterPrintAction == 1)
+            {
+                Clipboard.SetImage(image);
             }
 
             if (!Settings.appSettings.saveLocally)
@@ -106,9 +112,21 @@ namespace Prints
             foreverCheckBox1.Checked = Settings.appSettings.saveLocally;
             foreverCheckBox3.Checked = Settings.appSettings.usePrtScreenKey;
             foreverCheckBox4.Checked = Settings.appSettings.openInBrowser;
-            foreverCheckBox5.Checked = Settings.appSettings.copyToClipboard;
             foreverButton5.BaseColor = Settings.appSettings.outlineColor;
             foreverButton6.BaseColor = Settings.appSettings.hazeColor;
+
+            if(Settings.appSettings.afterPrintAction == 0)
+            {
+                foreverRadioButton1.Checked = true;
+            }
+            else if (Settings.appSettings.afterPrintAction == 1)
+            {
+                foreverRadioButton2.Checked = true;
+            }
+            else if (Settings.appSettings.afterPrintAction == 2)
+            {
+                foreverRadioButton3.Checked = true;
+            }
         }
 
         private void UpdateSettings()
@@ -116,7 +134,19 @@ namespace Prints
             Settings.appSettings.saveLocally = foreverCheckBox1.Checked;
             Settings.appSettings.usePrtScreenKey = foreverCheckBox3.Checked;
             Settings.appSettings.openInBrowser = foreverCheckBox4.Checked;
-            Settings.appSettings.copyToClipboard = foreverCheckBox5.Checked;
+
+            if (foreverRadioButton1.Checked)
+            {
+                Settings.appSettings.afterPrintAction = 0;
+            }
+            else if (foreverRadioButton2.Checked)
+            {
+                Settings.appSettings.afterPrintAction = 1;
+            }
+            else if (foreverRadioButton3.Checked)
+            {
+                Settings.appSettings.afterPrintAction = 2;
+            }
 
             Settings.SaveSettings();
         }
@@ -127,11 +157,6 @@ namespace Prints
         }
 
         private void foreverCheckBox4_CheckedChanged(object sender)
-        {
-            UpdateSettings();
-        }
-
-        private void foreverCheckBox5_CheckedChanged(object sender)
         {
             UpdateSettings();
         }
@@ -212,6 +237,31 @@ namespace Prints
             {
                 SnippingTool.Snip();
             }
+        }
+
+        private void foreverRadioButton1_CheckedChanged(object sender)
+        {
+            UpdateSettings();
+        }
+
+        private void foreverRadioButton2_CheckedChanged(object sender)
+        {
+            UpdateSettings();
+        }
+
+        private void foreverRadioButton3_CheckedChanged(object sender)
+        {
+            UpdateSettings();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/bruxo00/printgur");
+        }
+
+        private void foreverLabel5_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://diogomartino.com");
         }
     }
 }
