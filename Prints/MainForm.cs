@@ -19,7 +19,8 @@ namespace Prints
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private string[] args;
+        public MainForm(string[] args)
         {
             InitializeComponent();
             LoadSettings();
@@ -33,6 +34,13 @@ namespace Prints
             notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, MenuItem2_Click);
 
             Service.LoadKeyboardHook();
+
+            this.args = args;
+        }
+
+        private void StartMinimized()
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         void MenuItem3_Click(object sender, EventArgs e)
@@ -190,12 +198,17 @@ namespace Prints
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
+            HideApp();
+        }
+
+        private void HideApp()
+        {
             if (this.WindowState == FormWindowState.Minimized)
             {
                 Hide();
                 notifyIcon1.Visible = true;
 
-                if(!Settings.appSettings.hasSeenMessage)
+                if (!Settings.appSettings.hasSeenMessage)
                 {
                     notifyIcon1.ShowBalloonTip(1000);
                     Settings.appSettings.hasSeenMessage = true;
@@ -262,6 +275,19 @@ namespace Prints
         private void foreverLabel5_Click(object sender, EventArgs e)
         {
             Process.Start("https://diogomartino.com");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            if (this.args.Length > 1 && this.args[1] == "-minimized")
+            {
+                StartMinimized();
+            }
         }
     }
 }

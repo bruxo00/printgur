@@ -114,7 +114,7 @@ namespace Installer
         private void AddToStartup() // HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            rk.SetValue("Printgur", exePath);
+            rk.SetValue("Printgur", String.Format("\"{0}\" -minimized", exePath));
         }
 
         private void AddToContextMenu() // HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\image\shell

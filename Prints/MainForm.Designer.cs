@@ -38,6 +38,10 @@ namespace Prints
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.foreverButton1 = new ReaLTaiizor.Controls.ForeverButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.foreverRadioButton3 = new ReaLTaiizor.Controls.ForeverRadioButton();
+            this.foreverRadioButton2 = new ReaLTaiizor.Controls.ForeverRadioButton();
+            this.foreverRadioButton1 = new ReaLTaiizor.Controls.ForeverRadioButton();
+            this.foreverLabel7 = new ReaLTaiizor.Controls.ForeverLabel();
             this.foreverLabel6 = new ReaLTaiizor.Controls.ForeverLabel();
             this.foreverButton6 = new ReaLTaiizor.Controls.ForeverButton();
             this.foreverLabel1 = new ReaLTaiizor.Controls.ForeverLabel();
@@ -56,10 +60,6 @@ namespace Prints
             this.foreverLabel2 = new ReaLTaiizor.Controls.ForeverLabel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.foreverLabel7 = new ReaLTaiizor.Controls.ForeverLabel();
-            this.foreverRadioButton1 = new ReaLTaiizor.Controls.ForeverRadioButton();
-            this.foreverRadioButton2 = new ReaLTaiizor.Controls.ForeverRadioButton();
-            this.foreverRadioButton3 = new ReaLTaiizor.Controls.ForeverRadioButton();
             this.foreverForm1.SuspendLayout();
             this.foreverTabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -197,6 +197,69 @@ namespace Prints
             this.tabPage1.Size = new System.Drawing.Size(359, 332);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
+            // 
+            // foreverRadioButton3
+            // 
+            this.foreverRadioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverRadioButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.foreverRadioButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.foreverRadioButton3.Checked = false;
+            this.foreverRadioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.foreverRadioButton3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.foreverRadioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.foreverRadioButton3.Location = new System.Drawing.Point(10, 140);
+            this.foreverRadioButton3.Name = "foreverRadioButton3";
+            this.foreverRadioButton3.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
+            this.foreverRadioButton3.Size = new System.Drawing.Size(245, 22);
+            this.foreverRadioButton3.TabIndex = 15;
+            this.foreverRadioButton3.Text = "Don\'t do anything";
+            this.foreverRadioButton3.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton3_CheckedChanged);
+            // 
+            // foreverRadioButton2
+            // 
+            this.foreverRadioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverRadioButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.foreverRadioButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.foreverRadioButton2.Checked = false;
+            this.foreverRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.foreverRadioButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.foreverRadioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.foreverRadioButton2.Location = new System.Drawing.Point(10, 112);
+            this.foreverRadioButton2.Name = "foreverRadioButton2";
+            this.foreverRadioButton2.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
+            this.foreverRadioButton2.Size = new System.Drawing.Size(245, 22);
+            this.foreverRadioButton2.TabIndex = 14;
+            this.foreverRadioButton2.Text = "Copy raw image to clipboard";
+            this.foreverRadioButton2.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton2_CheckedChanged);
+            // 
+            // foreverRadioButton1
+            // 
+            this.foreverRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.foreverRadioButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.foreverRadioButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.foreverRadioButton1.Checked = true;
+            this.foreverRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.foreverRadioButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.foreverRadioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.foreverRadioButton1.Location = new System.Drawing.Point(10, 84);
+            this.foreverRadioButton1.Name = "foreverRadioButton1";
+            this.foreverRadioButton1.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
+            this.foreverRadioButton1.Size = new System.Drawing.Size(245, 22);
+            this.foreverRadioButton1.TabIndex = 13;
+            this.foreverRadioButton1.Text = "Copy URL to clipboard";
+            this.foreverRadioButton1.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton1_CheckedChanged);
+            // 
+            // foreverLabel7
+            // 
+            this.foreverLabel7.AutoSize = true;
+            this.foreverLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.foreverLabel7.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.foreverLabel7.ForeColor = System.Drawing.Color.LightGray;
+            this.foreverLabel7.Location = new System.Drawing.Point(7, 68);
+            this.foreverLabel7.Name = "foreverLabel7";
+            this.foreverLabel7.Size = new System.Drawing.Size(93, 13);
+            this.foreverLabel7.TabIndex = 12;
+            this.foreverLabel7.Text = "After printscreen";
             // 
             // foreverLabel6
             // 
@@ -439,69 +502,6 @@ namespace Prints
             // 
             this.colorDialog1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             // 
-            // foreverLabel7
-            // 
-            this.foreverLabel7.AutoSize = true;
-            this.foreverLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.foreverLabel7.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.foreverLabel7.ForeColor = System.Drawing.Color.LightGray;
-            this.foreverLabel7.Location = new System.Drawing.Point(7, 68);
-            this.foreverLabel7.Name = "foreverLabel7";
-            this.foreverLabel7.Size = new System.Drawing.Size(93, 13);
-            this.foreverLabel7.TabIndex = 12;
-            this.foreverLabel7.Text = "After printscreen";
-            // 
-            // foreverRadioButton1
-            // 
-            this.foreverRadioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverRadioButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.foreverRadioButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverRadioButton1.Checked = true;
-            this.foreverRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverRadioButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverRadioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.foreverRadioButton1.Location = new System.Drawing.Point(10, 84);
-            this.foreverRadioButton1.Name = "foreverRadioButton1";
-            this.foreverRadioButton1.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
-            this.foreverRadioButton1.Size = new System.Drawing.Size(245, 22);
-            this.foreverRadioButton1.TabIndex = 13;
-            this.foreverRadioButton1.Text = "Copy URL to clipboard";
-            this.foreverRadioButton1.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton1_CheckedChanged);
-            // 
-            // foreverRadioButton2
-            // 
-            this.foreverRadioButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverRadioButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.foreverRadioButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverRadioButton2.Checked = false;
-            this.foreverRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverRadioButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverRadioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.foreverRadioButton2.Location = new System.Drawing.Point(10, 112);
-            this.foreverRadioButton2.Name = "foreverRadioButton2";
-            this.foreverRadioButton2.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
-            this.foreverRadioButton2.Size = new System.Drawing.Size(245, 22);
-            this.foreverRadioButton2.TabIndex = 14;
-            this.foreverRadioButton2.Text = "Copy raw image to clipboard";
-            this.foreverRadioButton2.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton2_CheckedChanged);
-            // 
-            // foreverRadioButton3
-            // 
-            this.foreverRadioButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.foreverRadioButton3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.foreverRadioButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.foreverRadioButton3.Checked = false;
-            this.foreverRadioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.foreverRadioButton3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.foreverRadioButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.foreverRadioButton3.Location = new System.Drawing.Point(10, 140);
-            this.foreverRadioButton3.Name = "foreverRadioButton3";
-            this.foreverRadioButton3.Options = ReaLTaiizor.Controls.ForeverRadioButton._Options.Style1;
-            this.foreverRadioButton3.Size = new System.Drawing.Size(245, 22);
-            this.foreverRadioButton3.TabIndex = 15;
-            this.foreverRadioButton3.Text = "Don\'t do anything";
-            this.foreverRadioButton3.CheckedChanged += new ReaLTaiizor.Controls.ForeverRadioButton.CheckedChangedEventHandler(this.foreverRadioButton3_CheckedChanged);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,6 +514,7 @@ namespace Prints
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.foreverForm1.ResumeLayout(false);
             this.foreverTabPage1.ResumeLayout(false);
