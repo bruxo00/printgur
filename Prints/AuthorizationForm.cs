@@ -14,9 +14,12 @@ namespace Prints
 {
     public partial class AuthorizationForm : Form
     {
-        public AuthorizationForm()
+        private string[] args;
+
+        public AuthorizationForm(string[] args)
         {
             InitializeComponent();
+            this.args = args;
         }
 
         private void foreverButton1_Click(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace Prints
 
             if (isAuthorized)
             {
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(this.args);
                 mainForm.Show();
                 this.Hide();
             }

@@ -111,20 +111,20 @@ namespace Installer
             shortcut.Save();
         }
 
-        private void AddToStartup()
+        private void AddToStartup() // HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
         {
             RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            rk.SetValue("Printgur", exePath);
+            rk.SetValue("Printgur", String.Format("\"{0}\" -minimized", exePath));
         }
 
-        private void AddToContextMenu()
+        private void AddToContextMenu() // HKEY_LOCAL_MACHINE\SOFTWARE\Classes\SystemFileAssociations\image\shell
         {
             RegistryKey rk = Registry.LocalMachine.CreateSubKey("SOFTWARE\\Classes\\SystemFileAssociations\\image\\shell\\Printgur", true);
             rk.SetValue("", "Upload with Printgur");
             rk.SetValue("Icon", iconPath);
 
             rk = rk.CreateSubKey("command", true);
-            rk.SetValue("", string.Format("{0} \"%1\" -upload", exePath));
+            rk.SetValue("", string.Format("{0} -upload \"%1\"", exePath));
         }
 
         public void Install()

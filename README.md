@@ -27,8 +27,9 @@ Simple tool to take screenshots and upload them directly to Imgur.com. It will s
 4. Build the app
 
 ## Todo
-- [ ] Add minimize to startup
+- [X] Add minimize to startup
 - [ ] Optimize RAM usage by the snipping tool
 - [ ] Add a screenshot editor
-- [ ] Create uninstaller
-- [ ] Add hotkey to screenshot
+- [X] Create uninstaller
+- [X] Add hotkey to screenshot
+- [ ] Add multi monitor support
